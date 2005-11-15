@@ -30,6 +30,13 @@ AC_PROG_INSTALL
 
 AC_PATH_PROG(MKFONTDIR, mkfontdir)
 
+DEFAULT_FONTDIR=${libdir}/X11/fonts/Speedo
+AC_ARG_WITH(fontdir,
+	AS_HELP_STRING([--with-fontdir=FONTDIR], [Path to install fonts]),
+	[FONTDIR="$withval"],
+	[FONTDIR="$DEFAULT_FONTDIR"])
+AC_SUBST(FONTDIR)
+
 XORG_RELEASE_VERSION
 
 AC_OUTPUT([Makefile])
