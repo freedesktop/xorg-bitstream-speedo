@@ -30,6 +30,8 @@ AC_PROG_INSTALL
 
 AC_PATH_PROG(MKFONTDIR, mkfontdir)
 
+m4_ifdef([AS_HELP_STRING], , [m4_define([AS_HELP_STRING], m4_defn([AC_HELP_STRING]))])
+
 DEFAULT_FONTDIR=${libdir}/X11/fonts/Speedo
 AC_ARG_WITH(fontdir,
 	AS_HELP_STRING([--with-fontdir=FONTDIR], [Path to install fonts]),
