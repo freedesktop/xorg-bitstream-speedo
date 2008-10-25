@@ -29,6 +29,9 @@ AM_MAINTAINER_MODE
 AC_PROG_INSTALL
 
 AC_PATH_PROG(MKFONTDIR, mkfontdir)
+if test x"$MKFONTDIR" = x; then
+	AC_MSG_ERROR([mkfontdir is required to build bitstream-speedo fonts.])
+fi
 
 m4_ifdef([AS_HELP_STRING], , [m4_define([AS_HELP_STRING], m4_defn([AC_HELP_STRING]))])
 
