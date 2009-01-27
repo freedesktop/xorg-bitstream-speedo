@@ -8,3 +8,6 @@ configure
 install-sh
 missing
 *~
+font-bitstream-speedo-*.tar.*
+ChangeLog
+tags
