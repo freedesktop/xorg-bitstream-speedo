@@ -35,6 +35,8 @@ font_DATA = $(FONT_FILES)
 
 EXTRA_DIST = $(FONT_FILES) COPYRIGHT
 
+MAINTAINERCLEANFILES = ChangeLog INSTALL
+
 # Note that the fonts.scale is not generated; rather, it is copied above
 install-data-hook:
 	@rm -f $(DESTDIR)$(fontdir)/font.dir
