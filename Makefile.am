@@ -39,7 +39,7 @@ MAINTAINERCLEANFILES = ChangeLog INSTALL
 
 # Note that the fonts.scale is not generated; rather, it is copied above
 install-data-hook:
-	@rm -f $(DESTDIR)$(fontdir)/font.dir
+	@rm -f $(DESTDIR)$(fontdir)/fonts.dir
 	$(MKFONTDIR) $(DESTDIR)$(fontdir)
 
 distuninstallcheck:
